@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card rotation</title>
+    <style>
+        .card {
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .back, .front {
+            width: 272px;
+            height: 380px;
+            position: absolute;
+            -webkit-transition: all .8s;
+            transition: all .8s;
+        }
+
+        .back {
+            background-image: url('back.jpg');
+        }
+
+        .front {
+            background-image: url('front.jpg');
+
+            -webkit-transform: rotate3d(0,1,0, 180deg);
+            transform: rotate3d(0,1,0, 180deg);
+        }
+
+        .card:hover .back {
+            -webkit-transform:rotate3d(0,1,0, 180deg);
+            transform: rotate3d(0,1,0, 180deg);
+        }
+        .card:hover .front {
+            -webkit-transform: rotate3d(0,1,0, 0deg);
+            transform: rotate3d(0,1,0, 0deg);
+        }
+        .backface .back, .backface .front {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="card backface">
+            <div class="back"></div>
+            <div class="front"></div>
+    </div>
+</body>
+</html>

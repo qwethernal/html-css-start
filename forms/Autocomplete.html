@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Атрибут autocomplete</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Авторизация</legend>
+            <p>
+                <label>
+                    Имя пользователя
+                    <input type="text" name="username" autocomplete="off" />
+                </label>
+            </p>
+            <p>
+                <label>
+                    Пароль
+                    <input type="password" name="password" autocomplete="off" />
+                </label>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Отправить" />
+        </p>
+    </form>
+    <p>Перейдите по ссылке, после чего нажмите на кнопку "Back". Если браузер не запомнил значение в поле ввода пароля, значит атрибут `autocomplete` работает.</p>
+    <p><a href="http://google.com">http://google.com</a></p>
+</body>
+</html>
